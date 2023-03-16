@@ -9,6 +9,11 @@ export default [
       dir: 'dist',
     },
     external: ['readline'],
-    plugins: [typescript(), resolve()],
+    plugins: [
+      typescript(),
+      resolve({
+        exportConditions: ['node'],
+      }),
+    ],
   },
 ];

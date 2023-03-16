@@ -1,6 +1,8 @@
-export const print = (message, ...rest) => {
-  console.log(`\x1b[32m${message}\x1b[0m`);
+import chalk from 'chalk';
+
+export const print = (message: string, ...rest: string[]) => {
+  console.log(chalk.yellow(message));
   rest.forEach((line) => {
     console.log(line);
-  })
+  });
 };
