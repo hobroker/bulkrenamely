@@ -9,8 +9,6 @@ export default [
       dir: 'dist',
     },
     external: ['readline'],
-    plugins: [typescript({
-      target: 'es6',
-    }), resolve()],
+    plugins: [typescript(), resolve()],
   },
 ];
