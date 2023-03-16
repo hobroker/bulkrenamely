@@ -1,5 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
-import typescript from "@rollup/plugin-typescript";
+import typescript from '@rollup/plugin-typescript';
 
 export default [
   {
@@ -8,6 +8,9 @@ export default [
       format: 'es',
       dir: 'dist',
     },
-    plugins: [resolve(), typescript()],
+    external: ['readline'],
+    plugins: [typescript({
+      target: 'es6',
+    }), resolve()],
   },
 ];
